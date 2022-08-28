@@ -2,76 +2,22 @@
 
 ![image](https://drive.google.com/uc?export=view&id=1t-KRROAj4Smt_KFae3pNRHUq0CBYtK_m)
 
-
-
 ## :rocket: Applications Used
 
 GUI apps:
 
-* `Alacritty`
+`Alacritty`  `Docker`  `Rectangle`  `KeyCastr`  `balenaEtcher`  `Codye`
 
-* `MarkText`
+`KeePassXC`  `VLC`  `PyCharm`  `CLion`  `VMware Fusion`  `Telegram`
 
-* `Rectangle`
+`Visual Studio Code`  `MarkText`  `VirtualBox`  `Todoist`
 
-* `KeyCastr`
-
-* `KeePassXC`
-
-* `VLC`
-
-* `PyCharm`
-
-* `CLion`
-
-* `Visual Studio Code`
-
-* `balenaEtcher`
-
-* `Docker`
-
-* `VMware Fusion`
-
-* `Codye`
-
-* `VirtualBox`
-
-* `Telegram`
-
-* `Google Chrome`
-
-* `DaisyDisk`
-
-* `Keka`
-
-* `qBittorrent`
-
-* `Gifski`
-
-* `Todoist`
+`Google Chrome`  `DaisyDisk`  `Keka`  `qBittorrent`  `Gifski`
 
 
 
 Console apps:
 
-- `bat`
+`bat`  `cmake`  `htop`  `Homebrew`  `starship`
 
-- `cmake`
-
-- `exa`
-
-- `fzf`
-
-- `htop`
-
-- `neovim`
-
-- `neofetch`
-
-- `pyenv`
-
-- `starship`
-
-- `tmux`
-
-- `Homebrew`
+`neovim`  `neofetch`  `pyenv`  `tmux`  `fzf`  `exa`
