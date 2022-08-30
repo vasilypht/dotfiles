@@ -71,18 +71,21 @@ esac
 
 create_cfg_symlinks() {
     command_exists ln || {
-        echo "Command aaa not found!"
+        echo "Command ln not found!"
         echo "Install command and try again."
         exit 1
     }
 
-    ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-    ln -s ~/dotfiles/.config/bat ~/.config/bat
-    ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
-    ln -s ~/dotfiles/.config/tmux ~/.config/tmux
+    ln -s ~/.dotfiles/.config/alacritty ~/.config/alacritty
+    ln -s ~/.dotfiles/.config/bat ~/.config/bat
+    ln -s ~/.dotfiles/.config/starship.toml ~/.config/starship.toml
+    ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
 
     mkdir ~/.config/nvim >/dev/null
-    ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+    ln -s ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+
+    mv ~/.zshrc ~/.zshrc.old
+    ln -s ~/.dotfiles/.zshrc ~/.zshrc
     echo "Done!"
 }
 

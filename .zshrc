@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.config/oh-my-zsh"
 
 # Poetry
 export PATH="$HOME/.local/bin:$PATH"
@@ -21,6 +21,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Load Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # load starship
@@ -30,7 +32,7 @@ eval "$(starship init zsh)"
 alias ls="exa --icons --group --header"
 alias la="ls -a"
 alias ll="ls -l"
-alias l="ll -a"
+alias l="ls -la"
 
 # aliases vim
 alias vim="nvim"
@@ -39,10 +41,9 @@ export FZF_COMPLETION_TRIGGER='~~'
 export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border
   --preview-window hidden
   --preview 'bat --style=numbers --color=always --line-range :500 {}'
-  --bind '?:toggle-preview'" # :bat --style=numbers --color=always --line-range :500 {}' --preview-window hidden"
+  --bind '?:toggle-preview'"
 
-
-
+# Load fzf completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fd - cd to selected directory
