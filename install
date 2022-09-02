@@ -2,7 +2,7 @@
 
 
 OMZ_REP_URL="https://github.com/ohmyzsh/ohmyzsh.git"
-OMZ_HOME_PATH="~/.config/oh-my-zsh"
+OMZ_HOME_PATH="$HOME/.config/oh-my-zsh"
 
 
 
@@ -42,7 +42,7 @@ echo -n "Installing the plugin zsh-syntax-highlighting: " \
     && echo "OK!" || echo "FAIL!"
 
 # Installing the plugin zsh-history-substring-search
-echo -n "Installing the plugin zsh-history-substring-search: " \    
+echo -n "Installing the plugin zsh-history-substring-search: " \
     && git clone https://github.com/zsh-users/zsh-history-substring-search \
         $OMZ_HOME_PATH/custom/plugins/zsh-history-substring-search &>/dev/null \
     && echo "OK!" || echo "FAIL!"
