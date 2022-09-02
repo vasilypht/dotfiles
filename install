@@ -19,7 +19,7 @@ command_exists git || {
 
 
 # Installing the oh-my-zsh framework
-eval -n "Installing oh-my-zsh: " \
+echo -n "Installing oh-my-zsh: " \
     && git clone $OMZ_REP_URL $OMZ_HOME_PATH &>/dev/null \
     && echo "OK!" \
     || {
@@ -30,19 +30,19 @@ eval -n "Installing oh-my-zsh: " \
 
 
 # Installing the plugin zsh-autosuggestions
-eval -n "Installing the plugin zsh-autosuggestions: " \
+echo -n "Installing the plugin zsh-autosuggestions: " \
     && git clone https://github.com/zsh-users/zsh-autosuggestions \
         $OMZ_HOME_PATH/custom/plugins/zsh-autosuggestions &>/dev/null \
     && echo "OK!" || echo "FAIL!"
 
 # Installing the plugin zsh-syntax-highlighting
-eval -n "Installing the plugin zsh-syntax-highlighting: " \
+echo -n "Installing the plugin zsh-syntax-highlighting: " \
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
         $OMZ_HOME_PATH/custom/plugins/zsh-syntax-highlighting &>/dev/null \
     && echo "OK!" || echo "FAIL!"
 
 # Installing the plugin zsh-history-substring-search
-eval -n "Installing the plugin zsh-history-substring-search: " \    
+echo -n "Installing the plugin zsh-history-substring-search: " \    
     && git clone https://github.com/zsh-users/zsh-history-substring-search \
         $OMZ_HOME_PATH/custom/plugins/zsh-history-substring-search &>/dev/null \
     && echo "OK!" || echo "FAIL!"
@@ -50,33 +50,33 @@ eval -n "Installing the plugin zsh-history-substring-search: " \
 # ---- Installing symlinks ----
 
 # alacritty
-eval -n "Installing a symlink for alacritty: " \
+echo -n "Installing a symlink for alacritty: " \
     && ln -s ~/.dotfiles/.config/alacritty ~/.config/alacritty \
     && echo "OK!" || echo "FAIL!"
 
 # bat
-eval -n "Installing a symlink for bat: " \
+echo -n "Installing a symlink for bat: " \
     && ln -s ~/.dotfiles/.config/bat ~/.config/bat \
     && echo "OK!" || echo "FAIL!"
 
 # starship
-eval -n "Installing a symlink for starship: " \
+echo -n "Installing a symlink for starship: " \
     && ln -s ~/.dotfiles/.config/starship.toml ~/.config/starship.toml \
     && echo "OK!" || echo "FAIL!"
 
 # tmux
-eval -n "Installing a symlink for tmux: " \
+echo -n "Installing a symlink for tmux: " \
     && ln -s ~/.dotfiles/.config/tmux ~/.config/tmux \
     && echo "OK!" || echo "FAIL!"
 
 # nvim
-eval -n "Installing a symlink for nvim: " \
+echo -n "Installing a symlink for nvim: " \
     && mkdir ~/.config/nvim &>/dev/null \
     && ln -s ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim \
     && echo "OK!" || echo "FAIL!"
 
 # zshrc
-eval -n "Installing a symlink for zshrc: " \
+echo -n "Installing a symlink for zshrc: " \
     && mv ~/.zshrc ~/.zshrc.old \
     && ln -s ~/.dotfiles/.zshrc ~/.zshrc \
     && echo "OK!" || echo "FAIL!"
