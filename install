@@ -12,74 +12,79 @@ command_exists() {
 
 # Checking if git is installed
 command_exists git || {
-    echo "git is not installed!"
-    echo "Install git and try again...\n"
+    printf "%s\n"   "git is not installed!"
+    printf "%s\n\n" "Install git and try again..."
     exit 1
 }
 
 
 # Installing the oh-my-zsh framework
-echo -n "Installing oh-my-zsh: " \
+printf "%s " "Installing oh-my-zsh:" \
     && git clone $OMZ_REP_URL $OMZ_HOME_PATH &>/dev/null \
-    && echo "OK!" \
+    && printf "%s\n" "OK!" \
     || {
-    echo "FAIL!"
-    echo "Error while cloning repository.\n"
+    printf "%s\n"   "FAIL!"
+    printf "%s\n\n" "Error while cloning repository."
     exit 1
 }
 
 
 # Installing the plugin zsh-autosuggestions
-echo -n "Installing the plugin zsh-autosuggestions: " \
+printf "%s " "Installing the plugin zsh-autosuggestions:" \
     && git clone https://github.com/zsh-users/zsh-autosuggestions \
         $OMZ_HOME_PATH/custom/plugins/zsh-autosuggestions &>/dev/null \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # Installing the plugin zsh-syntax-highlighting
-echo -n "Installing the plugin zsh-syntax-highlighting: " \
+printf "%s " "Installing the plugin zsh-syntax-highlighting:" \
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
         $OMZ_HOME_PATH/custom/plugins/zsh-syntax-highlighting &>/dev/null \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # Installing the plugin zsh-history-substring-search
-echo -n "Installing the plugin zsh-history-substring-search: " \
+printf "%s " "Installing the plugin zsh-history-substring-search:" \
     && git clone https://github.com/zsh-users/zsh-history-substring-search \
         $OMZ_HOME_PATH/custom/plugins/zsh-history-substring-search &>/dev/null \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # ---- Installing symlinks ----
 
 # alacritty
-echo -n "Installing a symlink for alacritty: " \
+printf "%s " "Installing a symlink for alacritty:" \
     && ln -s ~/.dotfiles/.config/alacritty ~/.config/alacritty \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # bat
-echo -n "Installing a symlink for bat: " \
+printf "%s " "Installing a symlink for bat: " \
     && ln -s ~/.dotfiles/.config/bat ~/.config/bat \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # starship
-echo -n "Installing a symlink for starship: " \
+printf "%s " "Installing a symlink for starship: " \
     && ln -s ~/.dotfiles/.config/starship.toml ~/.config/starship.toml \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # tmux
-echo -n "Installing a symlink for tmux: " \
+printf "%s " "Installing a symlink for tmux: " \
     && ln -s ~/.dotfiles/.config/tmux ~/.config/tmux \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # nvim
-echo -n "Installing a symlink for nvim: " \
+printf "%s " "Installing a symlink for nvim: " \
     && mkdir ~/.config/nvim &>/dev/null \
     && ln -s ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
+
+# neofetch
+printf "%s " "Installing a symlink for neofetch:" \
+    && ln -s ~/.dotfiles/.config/neofetch ~/.config/neofetch \
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 # zshrc
-echo -n "Installing a symlink for zshrc: " \
+printf "%s " "Installing a symlink for zshrc: " \
     && mv ~/.zshrc ~/.zshrc.old \
     && ln -s ~/.dotfiles/.zshrc ~/.zshrc \
-    && echo "OK!" || echo "FAIL!"
+    && printf "%s\n" "OK!" || printf "%s\n" "FAIL!"
 
 
 # ---- build cache ----
