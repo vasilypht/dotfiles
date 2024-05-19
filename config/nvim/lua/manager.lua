@@ -14,4 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "olimorris/onedarkpro.nvim", priority = 1000, },
     { "nvim-treesitter/nvim-treesitter" },
+    { "xiyaowong/transparent.nvim" },
 })

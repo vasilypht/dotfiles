@@ -2,8 +2,8 @@
 vim.cmd.colorscheme("onedark")
 
 -- Common
+vim.opt.termguicolors = true
 vim.opt.wrap = false
-vim.cmd[[highlight ColorColumn ctermbg=0 guibg=lightgrey]]
 
 -- Line Numbers
 vim.opt.number = true
