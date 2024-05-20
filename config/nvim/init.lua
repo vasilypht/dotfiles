@@ -1,10 +1,10 @@
--- Package Manager
-require "manager"
+-- Plugin Manager
+require "plugin_manager"
 
 -- Plugins
 require "plugins/onedarkpro"
 require "plugins/treesitter"
 
 -- Vim Config
-require "vimconfig"
+require "vim_config"
 

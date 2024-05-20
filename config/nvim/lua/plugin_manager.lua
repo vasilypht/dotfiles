@@ -15,4 +15,5 @@ require("lazy").setup({
 	{ "olimorris/onedarkpro.nvim", priority = 1000, },
     { "nvim-treesitter/nvim-treesitter" },
     { "xiyaowong/transparent.nvim" },
+    { "m4xshen/autoclose.nvim" },
 })
