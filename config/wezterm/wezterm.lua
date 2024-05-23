@@ -110,12 +110,12 @@ config.keys = {
     {
         key = 'LeftArrow',
         mods = 'CTRL',
-        action = wezterm.action.MoveTabRelative(-1),
+        action = wezterm.action.ActivateTabRelative(-1),
     },
     {
         key = 'RightArrow',
         mods = 'CTRL',
-        action = wezterm.action.MoveTabRelative(1),
+        action = wezterm.action.ActivateTabRelative(1),
     },
     {
         key = 't',
