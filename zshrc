@@ -1,3 +1,11 @@
+# =====================
+#         pyenv
+# =====================
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+
 # =========================
 #         oh-my-zsh
 # =========================
@@ -5,6 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(
     git
+    fzf-tab
     copypath
     copyfile
     encode64
@@ -23,9 +32,8 @@ alias lla="ls -la"
 alias l="lla"
 
 
-# =====================
-#         pyenv
-# =====================
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# ===================
+#         FZF
+# ===================
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+zstyle ':fzf-tab:*' fzf-flags --height=60%
