@@ -5,17 +5,16 @@ local SOLID_LEFT_MOST = utf8.char(0x2588)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0bc)
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-    local edge_background = "#121212"
-    local background = "#4E4E4E"
-    local foreground = "#1C1B19"
-    local dim_foreground = "#3A3A3A"
+    local edge_background = "#21252b"
+    local background = "#494d64"
+    local foreground = "#cad3f5"
 
     if tab.is_active then
-        background = "#61afef"
-        foreground = "#1C1B19"
+        background = "#e06c75"
+        foreground = "#282c34"
     elseif hover then
-        background = "#abb2bf"
-        foreground = "#1C1B19"
+        background = "#61afef"
+        foreground = "#24273a"
     end
     local edge_foreground = background
 
@@ -25,6 +24,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     end
     local title = " " .. wezterm.truncate_right(tab.active_pane.title, max_width-1) .. " "
     return {
+        {Attribute={Italic=false}},
         {Attribute={Intensity="Bold"}},
         {Background={Color=edge_background}},
         {Foreground={Color=edge_foreground}},
@@ -49,49 +49,47 @@ config.default_cursor_style = 'BlinkingBar'
 config.cursor_thickness = '1px'
 config.cursor_blink_rate = 500
 
+
 config.colors = {
-    tab_bar = {
-        background = "#121212",
-        new_tab = {
-            bg_color = "#121212",
-            fg_color = "#FCE8C3",
-            intensity = "Bold",
-        },
-        new_tab_hover = {
-            bg_color = "#121212",
-            fg_color = "#61afef",
-            intensity = "Bold",
-        },
-    },
-    cursor_bg = '#61afef',
-    cursor_fg = '#61afef',
-    foreground = '#abb2bf',
-    background = '#21252b',
-    selection_fg = '#abb2bf',
-    selection_bg = '#323844',
     ansi = {
-        '#21252b',
-        '#e06c75',
-	    '#98c379',
-	    '#e5c07b',
-	    '#61afef',
-	    '#c678dd',
-	    '#56b6c2',
-	    '#abb2bf',
+        "#282c34", -- black
+        "#e06c75", -- red
+        "#98c379", -- green
+        "#e5c07b", -- yellow
+        "#61afef", -- blue
+        "#c678dd", -- purple
+        "#56b6c2", -- cyan
+        "#abb2bf", -- white
     },
     brights = {
-        '#767676',
-	    '#e06c75',
-	    '#98c379',
-	    '#e5c07b',
-	    '#61afef',
-	    '#c678dd',
-	    '#56b6c2',
-	    '#abb2bf',
+        "#5c6370", -- gray
+        "#e06c75", -- red
+        "#98c379", -- green
+        "#e5c07b", -- yellow
+        "#61afef", -- blue
+        "#c678dd", -- purple
+        "#56b6c2", -- cyan
+        "#abb2bf", -- white
     },
+    background = "#282c34",
+    foreground = "#abb2bf",
+    cursor_bg = "#61afef",
+    selection_bg = "#414858",
+    tab_bar = {
+        background = "#21252b",
+        new_tab = {
+            bg_color = "#21252b",
+            fg_color = "#909090",
+        },
+        new_tab_hover = {
+            bg_color = "#21252b",
+            fg_color = "#e5c07b",
+            italic = false,
+        },
+    },  
 }
 
-config.font = wezterm.font "FiraCodeNerdFont"
+config.font = wezterm.font({ family="CaskaydiaCoveNerdFont" })
 config.font_size = 11.0
 config.window_padding = {
     left = 4,
@@ -99,7 +97,7 @@ config.window_padding = {
     bottom = 2,
     top = 2,
 }
-config.window_background_opacity = 0.97
+config.window_background_opacity = 0.95
 config.hide_tab_bar_if_only_one_tab = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
