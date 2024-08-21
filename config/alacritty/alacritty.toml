@@ -1,0 +1,59 @@
+[font]
+size = 14
+
+[font.normal]
+family = "CaskaydiaCoveNerdFont"
+
+[font.bold]
+family = "CaskaydiaCoveNerdFont"
+
+[font.italic]
+family = "CaskaydiaCoveNerdFont"
+
+[font.bold_italic]
+family = "CaskaydiaCoveNerdFont"
+
+[shell]
+program = "/bin/tmux"
+args = [
+    "new-session",
+    "-A",
+    "-D",
+    "-s",
+    "main",
+]
+
+
+[colors.primary]
+foreground = "#abb2bf"
+background = "#282c34"
+
+[colors.cursor]
+cursor = "#61afef"
+
+[colors.normal]
+black   = "#282c34"
+red     = "#e06c75"
+green   = "#98c379"
+yellow  = "#e5c07b"
+blue    = "#61afef"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#abb2bf"
+
+
+[colors.bright]
+black   = "#5c6370"
+red     = "#e06c75"
+green   = "#98c379"
+yellow  = "#e5c07b"
+blue    = "#61afef"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#abb2bf"
+
+[cursor]
+style.shape = "Beam"
+vi_mode_style.shape = "Beam"
+
+

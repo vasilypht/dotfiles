@@ -10,7 +10,6 @@ fi
 # -----------
 source ~/.zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh-plugins/copypath/copypath.plugin.zsh
 
 autoload -U compinit; compinit
 source ~/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh
