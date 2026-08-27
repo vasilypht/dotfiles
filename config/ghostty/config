@@ -1,0 +1,5 @@
+mouse-scroll-multiplier = 1
+shell-integration = zsh
+theme = Aizen Dark
+background-opacity = 0.85
+background-blur = true
